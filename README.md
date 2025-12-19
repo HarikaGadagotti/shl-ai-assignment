@@ -45,33 +45,35 @@ Streamlit UI
 
 ---
 
+
 ## 4. Folder Structure
 
+```text
 shl-ai-assignment/
 │
 ├── data/
-│ ├── shl_assessments.csv # Scraped SHL assessment catalogue
-│ └── Gen_AI Dataset.xlsx # Provided evaluation dataset
+│   ├── shl_assessments.csv        # Scraped SHL assessment catalogue
+│   └── Gen_AI Dataset.xlsx        # Provided evaluation dataset
 │
 ├── scraper/
-│ └── scrape_shl.py # SHL product catalog scraper
+│   └── scrape_shl.py              # SHL product catalog scraper
 │
 ├── embeddings/
-│ ├── build_embeddings.py # Sentence embedding generation
-│ └── embeddings.pkl # Saved embeddings and metadata
+│   ├── build_embeddings.py        # Sentence embedding generation
+│   └── embeddings.pkl             # Saved embeddings and metadata
 │
 ├── recommender/
-│ └── retrieve.py # Semantic retrieval logic
+│   └── retrieve.py                # Semantic retrieval logic
 │
 ├── api/
-│ └── main.py # FastAPI backend
+│   └── main.py                    # FastAPI backend
 │
 ├── ui/
-│ └── app.py # Streamlit frontend
+│   └── app.py                     # Streamlit frontend
 │
 ├── evaluation/
-│ ├── basic_eval.py # Sanity evaluation
-│ └── generate_submission.py # Generates final submission CSV
+│   ├── basic_eval.py              # Sanity evaluation
+│   └── generate_submission.py     # Generates final submission CSV
 │
 ├── requirements.txt
 └── README.md
@@ -167,13 +169,13 @@ json
     }
   ]
 }
-9. Evaluation
-9.1 Run Basic Evaluation
+## 8. Evaluation
+### 8.1 Run Basic Evaluation
 
 PYTHONPATH=. python evaluation/basic_eval.py
 This prints top recommendations for sample queries.
 
-9.2 Final Submission CSV
+8.2 Final Submission CSV
 PYTHONPATH=. python evaluation/generate_submission.py
 Output:
 
